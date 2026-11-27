@@ -108,13 +108,6 @@ h1, h2, h3 {
     transform: translateY(-22.8%);
 }
 
-.photo-placeholder {
-    background: linear-gradient(135deg, #3a4a3d, #1b2a20);
-    border-radius: 0.5rem;
-    min-height: 260px;
-    width: 100%;
-}
-
 .eyebrow {
     color: var(--orange);
     font-size: 0.75rem;
@@ -135,13 +128,6 @@ h1, h2, h3 {
     --bs-table-bg: transparent;
     --bs-table-color: #fff;
     --bs-table-border-color: rgba(255, 255, 255, 0.15);
-}
-
-.panel-dark {
-    background: var(--green-light);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 0.5rem;
-    padding: 1.25rem;
 }
 
 .stat {
