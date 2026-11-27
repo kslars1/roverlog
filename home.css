@@ -1,0 +1,207 @@
+:root {
+    --green: #10261B;
+    --green-light: #1b3a2a;
+    --cream: #f3efe6;
+    --orange: #e07a1f;
+    --ink: #1a1a1a;
+}
+
+body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.rl-navbar {
+    background: var(--green);
+}
+
+.rl-navbar .nav-link,
+.rl-navbar .navbar-brand {
+    color: #fff;
+}
+
+.rl-logo {
+    width: clamp(90px, 14vw, 140px);
+    height: auto;
+}
+
+.btn-rover {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-rover:hover {
+    background: #c76a16;
+    border-color: #c76a16;
+    color: #fff;
+}
+
+.btn-outline-light-rover {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    color: #fff;
+}
+
+.section-dark {
+    background: var(--green);
+    color: #fff;
+}
+
+.section-pad {
+    padding: clamp(2.5rem, 6vw, 5rem) 0;
+}
+
+.hero {
+    position: relative;
+    background: #0b1a12;
+    color: #fff;
+}
+
+.hero-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Phones/tablets: image shows in full, buttons sit in a dark band below it */
+.hero-cta {
+    padding: 1rem;
+}
+
+/* Desktop: crop to widescreen and overlay the buttons under the baked-in tagline */
+@media (min-width: 992px) {
+    .hero-img {
+        aspect-ratio: 16 / 9;
+        max-height: 80vh;
+        object-fit: cover;
+        object-position: 50% 40%; /* keeps the headline, truck and journal in frame */
+    }
+
+    .hero-cta {
+        position: absolute;
+        left: 6%;
+        bottom: 8%;
+        padding: 0;
+    }
+}
+
+/* Zoomed crop of the portrait photo: shows the truck only (left ~72% of the width, from the roof down to the tires) so the mug at the lower right is cut out */
+.vehicle-photo-frame {
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border-radius: 0.5rem;
+}
+
+.vehicle-photo {
+    display: block;
+    width: 142%;
+    max-width: none;
+    height: auto;
+    transform: translateY(-22.8%);
+}
+
+.photo-placeholder {
+    background: linear-gradient(135deg, #3a4a3d, #1b2a20);
+    border-radius: 0.5rem;
+    min-height: 260px;
+    width: 100%;
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.card-rover {
+    background: #fff;
+    border: 1px solid #ddd5c3;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    height: 100%;
+}
+
+.record-table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #fff;
+    --bs-table-border-color: rgba(255, 255, 255, 0.15);
+}
+
+.panel-dark {
+    background: var(--green-light);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+}
+
+.stat {
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    font-weight: 800;
+    color: var(--green);
+}
+
+footer {
+    background: #0a1a12;
+    color: #cfd8d2;
+}
+
+.construction-banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem 0.75rem;
+    padding: 0.6rem 1rem;
+    background: #0a1a12;
+    color: #f3efe6;
+    font-size: 0.9rem;
+    text-align: center;
+    /* hazard-stripe edge in the brand orange */
+    border-bottom: 6px solid transparent;
+    border-image: repeating-linear-gradient(135deg, var(--orange) 0 12px, #0a1a12 12px 24px) 6;
+}
+
+.construction-badge {
+    background: var(--orange);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+}
+
+.btn-garage {
+    background: var(--green);
+    border-color: var(--green);
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-garage:hover {
+    background: var(--green-light);
+    border-color: var(--green-light);
+    color: #fff;
+}
+
+#newForm:not(:empty) {
+    background: #fff;
+    border: 1px solid #ddd5c3;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+}
+
+#newForm form {
+    max-width: 480px;
+}
